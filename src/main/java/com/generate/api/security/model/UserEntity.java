@@ -26,7 +26,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.generate.api.security.utils.UserRole;
 
-import lombok.Builder;
 
 @Entity
 @Table(name="user_entity") 
@@ -70,7 +69,6 @@ public class UserEntity implements UserDetails {
 	private LocalDateTime createDate;
 	
 	@JsonIgnore
-	@Builder.Default
 	private LocalDateTime lastPasswordChange = LocalDateTime.now();
 	
 	

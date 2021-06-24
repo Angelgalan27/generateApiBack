@@ -93,6 +93,14 @@ public class TipoContenido {
 	public void setPublico(boolean publico) {
 		this.publico = publico;
 	}
+
+	public Set<CamposTipoContenido> getCamposTipoContenido() {
+		return camposTipoContenido;
+	}
+
+	public void setCamposTipoContenido(Set<CamposTipoContenido> camposTipoContenido) {
+		this.camposTipoContenido = camposTipoContenido;
+	}
 	
 	
 }

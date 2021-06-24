@@ -65,6 +65,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.antMatchers(HttpMethod.POST, "/user/new").permitAll()
 			.antMatchers(HttpMethod.GET, "/user/**").authenticated()
 			.antMatchers(HttpMethod.PUT, "/user/update").authenticated()
+			.antMatchers(HttpMethod.POST, "/post").authenticated()
+			.antMatchers(HttpMethod.PUT, "/post").authenticated()
+			.antMatchers(HttpMethod.GET, "/post").permitAll()
+			.antMatchers(HttpMethod.GET, "/post/**").permitAll()
+			.antMatchers(HttpMethod.POST, "/categoria").authenticated()
+			.antMatchers(HttpMethod.PUT, "/categoria").authenticated()
+			.antMatchers(HttpMethod.GET, "/categoria").permitAll()
 			.anyRequest().authenticated();
 		
 		http.addFilterBefore(jwtAuthorizationFilter, UsernamePasswordAuthenticationFilter.class);

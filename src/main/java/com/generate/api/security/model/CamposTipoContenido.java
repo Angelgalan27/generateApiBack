@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class CamposTipoContenido {
 
@@ -18,6 +20,7 @@ public class CamposTipoContenido {
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_tipo_contenido")
+	@JsonIgnore
 	private TipoContenido tipoContenido;
 	
 	@JoinColumn(name = "id_tipo_campo")
